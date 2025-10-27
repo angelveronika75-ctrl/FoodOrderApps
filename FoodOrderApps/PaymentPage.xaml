@@ -1,0 +1,63 @@
+﻿<Page x:Class="FoodOrderApps.PaymentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      Title="Payment Page" Height="468" Width="720">
+
+    <Grid Background="#FFF8F5">
+        <!-- Judul -->
+        <TextBlock Text="Pilih Metode Pembayaran"
+                   FontSize="30"
+                   FontWeight="Bold"
+                   Foreground="#FF6B00"
+                   HorizontalAlignment="Center"
+                   Margin="0,40,0,0"/>
+
+        <!-- StackPanel Metode Pembayaran -->
+        <StackPanel VerticalAlignment="Center"
+                    HorizontalAlignment="Center"
+                    Margin="20">
+
+            <Button Content="Transfer Bank"
+                    Width="250" Height="60"
+                    Background="#FFD54F"
+                    Foreground="Black"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="Transfer_Click"/>
+
+            <Button Content="📱 QRIS"
+                    Width="250" Height="60"
+                    Background="#4FC3F7"
+                    Foreground="White"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="Qris_Click"/>
+
+            <Button Content="💵 Bayar Cash"
+                    Width="250" Height="60"
+                    Background="#81C784"
+                    Foreground="White"
+                    FontSize="18"
+                    FontWeight="SemiBold"
+                    BorderThickness="0"
+                    Cursor="Hand"
+                    Click="Cash_Click"/>
+        </StackPanel>
+
+        <!-- Tombol kembali -->
+        <Button Content="⬅ Kembali"
+                Width="120"
+                Height="40"
+                Background="#E57373"
+                Foreground="White"
+                FontWeight="Bold"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Bottom"
+                Margin="30"
+                Click="Back_Click"/>
+    </Grid>
+</Page>

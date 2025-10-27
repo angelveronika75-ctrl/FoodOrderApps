@@ -1,0 +1,90 @@
+﻿<Window x:Class="FoodOrderApps.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Food Order Apps" Height="500" Width="800" Background="#FFF5EDED">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- PANEL MENU -->
+        <ScrollViewer Grid.Column="0">
+            <WrapPanel Margin="20">
+                <!-- Menu 1 -->
+                <Border Background="White" CornerRadius="10" Margin="10" Padding="10" Width="150" Height="220" >
+                    <StackPanel>
+                        <Image Source="Images/burger.jpeg" Height="100" Margin="0,0,0,10"/>
+                        <TextBlock Text="hawai Soda" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Rp25.000" HorizontalAlignment="Center" />
+                        <Button Content="Tambah" 
+                                Background="#E57373" Foreground="White" 
+                                Margin="0,10,0,0"
+                                Click="AddToCart_Click" 
+                                Tag="Hawai Soda|25000"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Menu 2 -->
+                <Border Background="White" CornerRadius="10" Margin="10" Padding="10" Width="150" Height="220">
+                    <StackPanel>
+                        <Image Source="Images/Boba.jpeg" Height="100" Margin="0,0,0,10"/>
+                        <TextBlock Text="Jus Jeruk" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Rp18.000" HorizontalAlignment="Center" />
+                        <Button Content="Tambah" 
+                                Background="#E57373" Foreground="White" 
+                                Margin="0,10,0,0"
+                                Click="AddToCart_Click" 
+                                Tag="Jus Jeruk|18000"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Menu 3 -->
+                <Border Background="White" CornerRadius="10" Margin="10" Padding="10" Width="150" Height="220">
+                    <StackPanel>
+                        <Image Source="Images/nasi_goreng.jpeg" Height="100" Margin="0,0,0,10"/>
+                        <TextBlock Text="Nasi Goreng" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Rp18.000" HorizontalAlignment="Center" />
+                        <Button Content="Tambah" 
+                Background="#E57373" Foreground="White" 
+                Margin="0,10,0,0"
+                Click="AddToCart_Click" 
+                Tag="Jus Jeruk|18000"/>
+                    </StackPanel>
+                </Border>
+
+                <!-- Menu 4 -->
+                <Border Background="White" CornerRadius="10" Margin="10" Padding="10" Width="150" Height="220">
+                    <StackPanel>
+                        <Image Source="Images/sate_padang.jpeg" Height="100" Margin="0,0,0,10"/>
+                        <TextBlock Text="Sate Padang" FontWeight="Bold" HorizontalAlignment="Center"/>
+                        <TextBlock Text="Rp15.000" HorizontalAlignment="Center" />
+                        <Button Content="Tambah" 
+                Background="#E57373" Foreground="White" 
+                Margin="0,10,0,0"
+                Click="AddToCart_Click" 
+                Tag="Jus Jeruk|18000"/>
+                    </StackPanel>
+                </Border>
+            </WrapPanel>
+        </ScrollViewer>
+
+        <!-- PANEL KERANJANG -->
+        <StackPanel Grid.Column="1" Background="White">
+            <TextBlock Text="Pesanan Kamu" FontWeight="Bold" FontSize="20" Margin="0,0,0,10"/>
+            <ListBox x:Name="CartList" Background="#FFF8F8F8" BorderThickness="0" Height="300" Margin="0,0,0,10"/>
+            <TextBlock x:Name="TotalText" Text="Total: Rp0" FontSize="16" FontWeight="Bold" Margin="0,0,0,10"/>
+        </StackPanel>
+
+        <Button x:Name="OrderButton"
+        Content="Pesan Sekarang"
+        Background="#E57373"
+        Foreground="White"
+        FontWeight="Bold"
+        Height="40"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Top"
+        Margin="0,378,0,0"
+        Click="OrderButton_Click" Grid.Column="1" Width="267"/>
+    </Grid>
+</Window>
