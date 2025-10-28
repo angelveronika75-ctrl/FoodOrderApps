@@ -1,0 +1,44 @@
+.gitignore
+# Ignore Visual Studio temporary files, build results, and user files
+
+# Build folders
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+TestResults/
+*.vspscc
+*.vssscc
+*.user
+*.suo
+*.cache
+*.pdb
+*.tmp
+*.obj
+*.exe
+*.dll
+*.dbmdl
+
+# Visual Studio 2019/2022 folders
+.vs/
+
+# Packages
+*.nupkg
+*.snupkg
+*.nuspec
+packages/
+
+# User-specific files
+*.userosscache
+*.userprefs
+
+# Others
+*.db
+*.bak
+*.log
+*.DS_Store
+Thumbs.db
+desktop.ini
+
+# Publish files
+publish/
+wwwroot/

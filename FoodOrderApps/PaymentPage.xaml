@@ -1,7 +1,7 @@
 ﻿<Page x:Class="FoodOrderApps.PaymentPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      Title="Payment Page" Height="468" Width="720">
+      Title="PaymentPage">
 
     <Grid Background="#FFF8F5">
         <!-- Judul -->
@@ -10,7 +10,7 @@
                    FontWeight="Bold"
                    Foreground="#FF6B00"
                    HorizontalAlignment="Center"
-                   Margin="0,40,0,0"/>
+                   Margin="0,48,0,0" Width="405" Height="389" VerticalAlignment="Top"/>
 
         <!-- StackPanel Metode Pembayaran -->
         <StackPanel VerticalAlignment="Center"

@@ -66,5 +66,29 @@ namespace FoodOrderApps
         {
 
         }
+
+        private void PesanSekarang_Click(object sender, RoutedEventArgs e)
+        {
+            PaymentPage paymentPage = new FoodOrderApps.PaymentPage();
+            Window paymentWindow = new Window
+            {
+                Title = "Pembayaran",
+                Content = paymentPage,
+                Height = 400,
+                Width = 600,
+                WindowStartupLocation = WindowStartupLocation.CenterScreen
+            };
+            paymentWindow.ShowDialog();
+        }
+
+        private void PayButton_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Pembayaran berhasil! Terima kasih telah memesan 😊");
+
+            // Reset keranjang setelah bayar
+            CartList.Items.Clear();
+            TotalText.Text = "Total: Rp0";
+            PayButton.Visibility = Visibility.Collapsed;
+        }
     }
 }

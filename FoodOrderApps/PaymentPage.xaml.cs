@@ -24,6 +24,17 @@ namespace FoodOrderApps
         {
             InitializeComponent();
         }
+
+        private void Payment_Click(object sender, RoutedEventArgs e)
+        {
+            PaymentPage paymentPage = new PaymentPage();
+            this.Content = paymentPage;
+        }
+        private void OpenPaymentPage_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PaymentPage());
+        }
+
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             // kembali ke halaman pemesanan
